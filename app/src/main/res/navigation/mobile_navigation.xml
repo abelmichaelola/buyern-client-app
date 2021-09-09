@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/paymentMainPageFragment">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.life.buyern.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_explore"
+        android:name="com.life.buyern.ui.Explore.ExploreFragment"
+        android:label="explore_fragment"
+        tools:layout="@layout/explore_fragment" />
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.life.buyern.ui.Search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/search_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_bookmarks"
+        android:name="com.life.buyern.ui.Bookmarks.BookmarksFragment"
+        android:label="@string/title_bookmarks"
+        tools:layout="@layout/bookmarks_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.life.buyern.ui.Account.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/account_fragment">
+        <action
+            android:id="@+id/action_navigation_account_to_paymentMainPageFragment"
+            app:destination="@id/paymentMainPageFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit" />
+        <action
+            android:id="@+id/action_navigation_account_to_ordersFragment"
+            app:destination="@id/ordersFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit" />
+        <action
+            android:id="@+id/action_navigation_account_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.life.buyern.ui.Orders.OrdersFragment"
+        android:label="orders_fragment"
+        tools:layout="@layout/orders_fragment" />
+    <fragment
+        android:id="@+id/paymentMainPageFragment"
+        android:name="com.life.buyern.ui.Payment.PaymentMainPageFragment"
+        android:label="fragment_payment_main_page"
+        tools:layout="@layout/fragment_payment_main_page" >
+        <action
+            android:id="@+id/action_paymentMainPageFragment_to_paymentMethodsFragment"
+            app:destination="@id/paymentMethodsFragment" />
+        <action
+            android:id="@+id/action_paymentMainPageFragment_to_transactionsHistoryFragment"
+            app:destination="@id/transactionsHistoryFragment" />
+        <action
+            android:id="@+id/action_paymentMainPageFragment_to_bonusesFragment"
+            app:destination="@id/bonusesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.life.buyern.ui.Profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" />
+    <fragment
+        android:id="@+id/paymentMethodsFragment"
+        android:name="com.life.buyern.ui.Payment.PaymentMethodsFragment"
+        android:label="fragment_payment_methods"
+        tools:layout="@layout/fragment_payment_methods" />
+    <fragment
+        android:id="@+id/transactionsHistoryFragment"
+        android:name="com.life.buyern.ui.Payment.TransactionsHistoryFragment"
+        android:label="fragment_transactions_history"
+        tools:layout="@layout/fragment_transactions_history" />
+    <fragment
+        android:id="@+id/bonusesFragment"
+        android:name="com.life.buyern.ui.Payment.BonusesFragment"
+        android:label="fragment_bonuses"
+        tools:layout="@layout/fragment_bonuses" />
+</navigation>

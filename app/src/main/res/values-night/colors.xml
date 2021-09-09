@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_main">@android:color/background_dark</color>
+    <color name="background_sub">@android:color/background_light</color>
+</resources>
